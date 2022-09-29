@@ -27,5 +27,4 @@ public class PokemonService {
     public void eliminarPokemon(Long id){
         pokemonRepository.deleteById(id);
     }
-
 }

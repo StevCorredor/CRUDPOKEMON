@@ -13,11 +13,13 @@ import java.util.List;
 //@Data - Reemplaza los Getter y Setter
 @ToString
 
+
+@Table(name = "Pokemon")
 public class Pokemon {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
-    private Long id;
+    private Long idPokemon;
 
     private String nombre;
     private int vida;
@@ -36,7 +38,7 @@ public class Pokemon {
     @JoinColumn(name = "entrenador_id")
     private Entrenador entrenador;*/
 
-    @ManyToMany
-    @JoinTable(name = "entrenador_pokemon")
-    private List<Entrenador> entrenadors;
+//    @ManyToMany - Ojo. cambio más reciente
+//    @JoinTable(name = "entrenador_pokemon")
+//    private List<Entrenador> entrenadors;
 }
